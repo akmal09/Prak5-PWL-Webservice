@@ -14,7 +14,7 @@ class KomentarTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_show_komentar()
     {
         $response = $this->get('/api/komentars');
 
@@ -31,5 +31,6 @@ class KomentarTest extends TestCase
         ]);
 
         $this->assertEquals(201,$response->baseResponse->getStatusCode());
+        return $response->baseResponse->getStatusCode();
     }
 }
