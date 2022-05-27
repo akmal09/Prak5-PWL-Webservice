@@ -3,9 +3,12 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+
 
 class KomentarTest extends TestCase
 {
+    use DatabaseMigrations;
     /**
      * A basic unit test example.
      *
