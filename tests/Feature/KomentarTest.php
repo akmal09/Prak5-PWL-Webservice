@@ -6,6 +6,8 @@ use App\Models\Komentar;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+
 
 class KomentarTest extends TestCase
 {
@@ -14,6 +16,9 @@ class KomentarTest extends TestCase
      *
      * @return void
      */
+
+    use DatabaseMigrations;
+
     public function test_show_komentar()
     {
         $response = $this->get('/api/komentars');
